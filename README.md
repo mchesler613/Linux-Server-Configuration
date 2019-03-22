@@ -294,3 +294,6 @@ The sample database contains data for a catalog of clothing categories and items
 + [PostgreSQL Documentation](https://www.postgresql.org/docs/9.6/app-psql.html)
 + [Git Hub Help](https://help.github.com/en#dotcom)
 + [Stack Overflow](http://stackoverflow.com)
+
+# Issues
+The Google Sign-in Authentication portion of this project is not working.  The Udacity reviewers of this project are already aware of this issue based on this link [Google Sign-in](https://knowledge.udacity.com/questions/28323) submitted by Diego P in the comments.
