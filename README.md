@@ -71,7 +71,7 @@ add this line into the sudoers.d file: `student ALL=(ALL) NOPASSWD:ALL`
 To enforce key-based authentication and disable password logins,
 
 + edit the /etc/ssh/sshd_config file in the Linux server via `vi /etc/ssh/sshd_config` and make sure the line `PasswordAuthentication no` exists. On the Lightsail Linux server, this line is the default.
-
++ to completely disable **root** login to the server, enter **no** for the `PermitRootLogin no` entry.
   
 
 # Configure Firewall on Linux server
@@ -294,6 +294,7 @@ The sample database contains data for a catalog of clothing categories and items
 + [PostgreSQL Documentation](https://www.postgresql.org/docs/9.6/app-psql.html)
 + [Git Hub Help](https://help.github.com/en#dotcom)
 + [Stack Overflow](http://stackoverflow.com)
++ [# Configuring SSHD on the Server](https://serversforhackers.com/c/configuring-sshd-on-the-server)
 
 # Issues
 The Google Sign-in Authentication portion of this project is not working.  The Udacity reviewers of this project are already aware of this issue based on this link [Google Sign-in](https://knowledge.udacity.com/questions/28323) submitted by Diego P in the comments.
