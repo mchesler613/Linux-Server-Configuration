@@ -177,7 +177,7 @@ Type the command     `sudo -u postgres psql postgres` at the terminal.  The outp
     psql (9.5.14)
     Type "help" for help.
     
-    postgres=# CREATE USER catalog with PASSWORD 'shoresh';
+    postgres=# CREATE USER catalog with PASSWORD '<your password>';
     CREATE ROLE
     postgres=# ALTER USER catalog CREATEDB;
     ALTER ROLE
@@ -191,7 +191,7 @@ Type the command     `sudo -u postgres psql postgres` at the terminal.  The outp
     GRANT
     catalog=# \q
 
-Type the command `psql postgresql://catalog<password>@localhost/catalog` to verify that the database and user are created.
+Type the command `psql postgresql://catalog@localhost/catalog` to verify that the database and user are created.
 
 At the **psql** prompt, type `\l` to list databases and users created.  You will see the following:
 ` 
@@ -232,7 +232,8 @@ To install git type this command at the terminal:
 + `sudo vi /etc/apache2/sites-available/catalog.conf` 
 with this content: 
 
-    `<VirtualHost *:80>
+    ```
+    <VirtualHost *:80>
                 ServerName 99.79.40.240
                 ServerAdmin admin@99.79.40.240
                 WSGIScriptAlias / /var/www/catalog/catalog.wsgi
@@ -248,8 +249,8 @@ with this content:
                 ErrorLog ${APACHE_LOG_DIR}/error.log
                 LogLevel warn
                 CustomLog ${APACHE_LOG_DIR}/access.log combined
-        </VirtualHost>`
-
+    </VirtualHost>`
+    ```
 + Enable the catalog app with this command: 
 `sudo a2ensite catalog`
 + Create the WSGI file: 
