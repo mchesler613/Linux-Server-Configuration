@@ -284,7 +284,7 @@ python catalogtest.py
 `
 The sample database contains data for a catalog of clothing categories and items.
 
-+ Verify that the tables exist in the **catalog** database with `psql postgresql://catalog<password>@localhost/catalog`.  At the **psql** terminal type `\dt` and `\d` to list the tables.  
++ Verify that the tables exist in the **catalog** database with `psql postgresql://catalog@localhost/catalog`.  At the **psql** terminal type `\dt` and `\d` to list the tables.  
 
 + Verify that the tables were populated by typing simple queries at the **psql** terminal, such as `select * from category`, `select * from item` and `select * from user`
 
