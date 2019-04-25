@@ -257,16 +257,15 @@ with this content:
 `sudo vi /var/www/catalog/catalog.wsgi` 
 with the content:
 
-`
-
+```
     #!/usr/bin/python
     import sys
     import logging
     logging.basicConfig(stream=sys.stderr)
     sys.path.insert(0,"/var/www/catalog/")
-    import app as application
+    from catalog import app as application
     application.secret_key = 'specialsecretkey'
-
+```
 + To restart Apache with the new configuration, type `sudo apache2ctl restart`
 
 ## Install SQLAlchemy, psycopg2, oauth2client, requests
